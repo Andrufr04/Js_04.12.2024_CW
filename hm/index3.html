@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Завдання 1
+        // Подсчитать сумму всех чисел в заданном пользователем
+        // диапазоне. 
+        // 
+        // function sumInRange(start, end) {
+        //     let sum = 0;
+        //     for (let i = start; i <= end; i++) {
+        //         sum += i;
+        //     }
+        //     return sum;
+        // }
+
+        // document.write(`Сумма чисел = ${sumInRange(1, 3)} <br/>`);
+
+        // Завдання 2
+        // Запросить 2 числа и найти только наибольший общий
+        // делитель.
+        // 
+        // function gcd(a, b) {
+        //     while (b !== 0) {
+        //         let temp = b;
+        //         b = a % b;
+        //         a = temp;
+        //     }
+        //     return a;
+        // }
+
+        // let num1 = parseInt(prompt("Введите первое число:"));
+        // let num2 = parseInt(prompt("Введите второе число:"));
+
+        // document.write(`НОД чисел ${num1} и ${num2} : ${gcd(num1, num2)} <br/>`);
+
+        // Завдання 3
+        // Запросить у пользователя число и вывести все делители
+        // этого числа
+        //
+        // function printDivisors(num) {
+        //     let result = "Делители числа " + num + ": ";
+        //     for (let i = 1; i <= num; i++) {
+        //         if (num % i === 0) {
+        //             result += i + " ";
+        //         }
+        //     }
+        //     document.write(result + "<br/>");
+        // }
+
+        // let number = parseInt(prompt("Введите число:"));
+        // printDivisors(number);
+
+        // Завдання 4
+        // Определить количество цифр в введенном числе.
+        // Запросим число у пользователя
+
+        // Завдання 5
+        // Запросить у пользователя 10 чисел и подсчитать, сколько
+        // он ввел положительных, отрицательных и нулей. При этом
+        // также посчитать, сколько четных и нечетных. Вывести
+        // статистику на экран. Учтите, что достаточно одной переменной 
+        // (не 10) для ввода чисел пользователем.
+        //
+        // Инициализация счетчиков
+        // let positiveCount = 0;
+        // let negativeCount = 0;
+        // let zeroCount = 0;
+        // let evenCount = 0;
+        // let oddCount = 0;
+
+        // for (let i = 1; i <= 10; i++) {
+        //     let number = parseInt(prompt(`Введите число [${i}]:`));
+
+        //     if (number > 0) {
+        //         positiveCount++;
+        //     } else if (number < 0) {
+        //         negativeCount++;
+        //     } else {
+        //         zeroCount++;
+        //     }
+
+        //     if (number % 2 === 0) {
+        //         evenCount++;
+        //     } else {
+        //         oddCount++;
+        //     }
+        // }
+
+        // document.write(`<p>Положительных чисел: ${positiveCount}</p>
+        //                 <p>Отрицательных чисел: ${negativeCount}</p>
+        //                 <p>Нулей: ${zeroCount}</p>
+        //                 <p>Четных чисел: ${evenCount}</p>
+        //                 <p>Нечетных чисел: ${oddCount}</p>
+        //             `);
+
+        // Завдання 6
+        // Зациклить калькулятор. Запросить у пользователя 2 числа
+        // и знак, решить пример, вывести результат и спросить, 
+        // хочет ли он решить еще один пример. И так до тех пор, пока
+        // пользователь не откажется.
+        //
+        // do {
+        //     let num1 = parseFloat(prompt("Введите первое число:"));
+        //     let num2 = parseFloat(prompt("Введите второе число:"));
+        //     let operator = prompt("Введите знак операции (+, -, *, /):");
+
+        //     let result;
+
+        //     switch (operator) {
+        //         case "+":
+        //             result = num1 + num2;
+        //             break;
+        //         case "-":
+        //             result = num1 - num2;
+        //             break;
+        //         case "*":
+        //             result = num1 * num2;
+        //             break;
+        //         case "/":
+        //             result = num2 !== 0 ? num1 / num2 : "Деление на ноль нельзя";
+        //             break;
+        //         default:
+        //             result = "Неверный знак операции";
+        //     }
+
+        //     document.write(`<p>Результат: ${result}</p>`);
+
+        // } while (confirm("Хотите решить еще один пример?"));
+
+        // Завдання 7
+        // Запросить у пользователя число и на сколько цифр его
+        // сдвинуть. Сдвинуть цифры числа и вывести результат (если
+        // число 123456 сдвинуть на 2 цифры, то получится 345612).
+        //
+        // function shiftNumber() {
+        //     let num = prompt("Введите число:", "123456");
+        //     let shift = parseInt(prompt("На сколько цифр сдвинуть?", "2"));
+
+        //     let numStr = num.toString();
+        //     let len = numStr.length;
+
+        //     shift = shift >= len ? shift - len : shift;
+
+        //     let result = "";
+
+        //     for (let i = shift; i < len + shift; i++) {
+        //         let index = i;
+        //         if (index >= len) {
+        //             index -= len;
+        //         }
+        //         result += numStr[index];
+        //     }
+
+        //     document.write(`<p>Результат: ${result}</p>`);
+        // }
+
+        // shiftNumber();
+
+        // Завдання 8
+        // Зациклить вывод дней недели таким образом: «День недели.
+        // Хотите увидеть следующий день?» и так до тех пор, пока
+        // пользователь нажимает OK
+        // 
+        // function showDaysOfWeek() {
+        //     days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+        //     let index = 0;
+
+        //     while (true) {
+        //         let answer = confirm(`${days[index]}. Хотите увидеть следующий день?`);
+
+        //         if (!answer) {
+        //             break;
+        //         }
+
+        //         index++;
+        //         if (index >= days.length) {
+        //             index = 0;
+        //         }
+        //     }
+
+        //     document.write("<p>Все:(</p>");
+        // }
+
+        // showDaysOfWeek();
+
+        // Завдання 9
+        // Вывести таблицу умножения для всех чисел от 2 до 9.
+        // Каждое число необходимо умножить на числа от 1 до 10.
+        // 
+        // function multiplicationTable() {
+        //     for (let i = 2; i <= 9; i++) 
+        //     {
+        //         document.write(`<h2>Таблица умножения для ${i}:</h2>`);
+
+        //         for (let j = 1; j <= 10; j++) 
+        //         { 
+        //             document.write(`${i} x ${j} = ${i * j}<br>`); 
+        //         }
+
+        //     }
+        // }
+
+        // multiplicationTable();
+
+        // Завдання 10
+        // 
+        // function guessNumber() {
+        //     let min = 0;
+        //     let max = 100;
+        //     let guess;
+
+        //     while (true) 
+        //     {
+        //         guess = Math.ceil((min + max) / 2);
+
+        //         let answer = prompt(`Ваше число > ${guess}, < ${guess} или = ${guess}? (Введите '>', '<', '=')`);
+
+        //         if (answer == "=") {
+        //             alert(`Ваше число: ${guess}`);
+        //             break;
+        //         } 
+        //         else if (answer == ">") 
+        //         {
+        //             min = guess + 1;
+        //         } 
+        //         else if (answer == "<") 
+        //         {
+        //             max = guess - 1;
+        //         } 
+        //         else 
+        //         {
+        //             alert("Ошибка");
+        //         }
+        //     }
+        // }
+
+        // guessNumber();
+
+
+    </script>
+</body>
+
+</html>
